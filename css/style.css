@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+body {
+    background-image: url(../imagens/bg-desktop.svg);
+    background-color: blueviolet;
+    /* overflow-x: hidden; */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fl;
+    grid-template-rows: 20vh 70vh 10vh;
+    gap: 10px;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+header {
+    grid-area: header;
+    padding: 3%;
+    
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parte1 {
+    width: 55%;
+    padding-left: 5%;
+    
+}
+
+.parte1-ilustracao {
+    height: 450px;
+    
+}
+
+.parte2 {
+    width: 45%;
+}
+.parte2-titulo {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+    
+}
+
+.parte2-paragrafo {
+    width: 80%;
+    padding-right: 0;
+}
+
+.parte2-botao {
+    border: none;
+    border-radius: 20px;
+    width: 25%;
+    height: 10%;
+    color: blueviolet;
+    margin-top: 20px;
+}
+
+.parte2-botao:hover {
+    background-color: rgb(219, 41, 243);
+    color: white
+}
+
+.rodape {
+    grid-area: footer;
+    display: flex;    
+    /* justify-content: flex-end; */align-content: flex-end;
+    justify-content: flex-end;
+}
+
+.rodape-social {
+    padding-right: 5%;
+    height: 40px;
+    
+}
+
+@media only screen and (max-width: 1150px){
+    .container {
+        grid-template-rows: 20vh 115vh 10vh;
+    }
+    main{
+        flex-direction: column;
+
+    }
+
+    .parte2 {
+        width: 100%;
+        margin-left: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .container {
+        grid-template-rows: 20vh 115vh 10vh;
+    }
+    main{
+        flex-direction: column;
+
+    }
+
+    .parte1-ilustracao {
+        height: 300px;
+        align-content: center;
+    }
+    
+    .parte2 {
+        width: 100%;
+        margin-left: 5%;
+        text-align: center;
+
+    }
+    .parte2-paragrafo{
+        margin-left: 5%;
+    }
+
+
+}
+
+
